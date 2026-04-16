@@ -1,3 +1,6 @@
+"""
+Descripción: Implementación de bucles for para iterar sobre secuencias finitas de datos.
+"""
 print("Count to 10!")
 
 for x in range (0,11):

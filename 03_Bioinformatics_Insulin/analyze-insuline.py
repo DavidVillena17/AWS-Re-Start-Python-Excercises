@@ -1,4 +1,8 @@
-#Se una la librería re para trabajar con expresiones regulares
+"""
+Script: analyze-insuline.py
+Descripción: Limpieza de la secuencia genómica de preproinsulina humana utilizando Expresiones Regulares.
+"""
+#Se usa la librería re para trabajar con expresiones regulares
 import re
 
 #Abrimos el archivo de texto
@@ -32,37 +36,37 @@ if len(clean_data) != 110:
     exit()
 
 #Extraemos los primeros 24 caracteres
-lsInsulin = clean_data[0:24]
+ls_insulin = clean_data[0:24]
 
 #Extraemos del carácter 25 al 54
-bInsulin = clean_data[24:54]
+b_insulin = clean_data[24:54]
 
 #Extraemos del carácter 55 al 89
-cInsulin = clean_data[54:89]
+c_insulin = clean_data[54:89]
 
 #Extraemos del carácter 90 al 110
-aInsulin = clean_data[89:110]
+a_insulin = clean_data[89:110]
 
 #Creamos los diferentes archivos
 with open("lsInsuline-seq-clean.txt", "w") as f:
-    f.write(lsInsulin)
+    f.write(ls_insulin)
 
 with open("bInsuline-seq-clean.txt", "w") as f:
-    f.write(bInsulin)
+    f.write(b_insulin)
     
 with open("cInsuline-seq-clean.txt", "w") as f:
-    f.write(cInsulin)
+    f.write(c_insulin)
     
 with open("aInsuline-seq-clean.txt", "w") as f:
-    f.write(aInsulin)
+    f.write(a_insulin)
     
 #Verificamos el tamaño de caracteres
-print("lsinsulin = ", len(lsInsulin))
-print("binsulin = ", len(bInsulin))
-print("cinsulin = ", len(cInsulin))
-print("ainsulin = ", len(aInsulin))
+print("lsinsulin = ", len(ls_insulin))
+print("binsulin = ", len(b_insulin))
+print("cinsulin = ", len(c_insulin))
+print("ainsulin = ", len(a_insulin))
 
-insulin = bInsulin + aInsulin
+insulin = b_insulin + a_insulin
 
 #Total de insulina
 print("Insulina procesada = ", len(insulin))
